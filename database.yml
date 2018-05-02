@@ -1,2 +1,6 @@
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  database: heroku_d621c641b841663
+  username: baadd3ec66bd37
+  password: 06105946
+  host: us-cdbr-iron-east-05.cleardb.net

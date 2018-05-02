@@ -24,8 +24,8 @@ class App < Sinatra::Application
 end
 
 get '/' do
-  'Hi ' + User.first.name + ', your password is ' + User.first.password
-  # "hi"
+  # 'Hi ' + User.first.name + ', your password is ' + User.first.password
+  "hi"
 end
 
 get '/test/:name' do

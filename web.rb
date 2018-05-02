@@ -1,8 +1,7 @@
 require 'rubygems'
 require 'sinatra'
-require 'sinatra/activerecord'
 require 'active_record'
-require './environments' #database configuration
+# require './environments' #database configuration
 
 # ActiveRecord::Base.establish_connection(
 #   :adapter  => "mysql2",

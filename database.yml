@@ -1,5 +1,5 @@
 production:
-  adapter: postgresql
+  adapter: mysql2
   database: heroku_d621c641b841663
   username: baadd3ec66bd37
   password: 06105946

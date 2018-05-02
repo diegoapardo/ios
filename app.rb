@@ -22,7 +22,7 @@ class App < Sinatra::Application
 end
 
 get '/' do
-  'Hi ' + User.first.name + ', your password is ' + User.first.password
+  'Hi ' 
 end
 
 get '/test/:name' do

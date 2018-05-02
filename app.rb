@@ -2,10 +2,6 @@ require 'rubygems'
 require 'sinatra'
 require 'active_record'
 
-Dir['vendor/*'].each do |lib|
-  $:.unshift(File.join(File.dirname(__FILE__), lib, 'lib'))
-end
-
 ActiveRecord::Base.establish_connection(
   :adapter  => "mysql2",
   :host     => "us-cdbr-iron-east-05.cleardb.net",

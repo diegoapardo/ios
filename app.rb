@@ -21,14 +21,10 @@ end
 class App < Sinatra::Application
 end
 
-class App < Sinatra::Base
-  get '/' do
-    'Hi ' + User.first.name + ', your password is ' + User.first.password
-  end
+get '/' do
+  'Hi ' + User.first.name + ', your password is ' + User.first.password
 end
 
-class App < Sinatra::Base
-  get '/test/:name' do
-    "Hello #{params['name']}!"
-  end
+get '/test/:name' do
+  "Hello #{params['name']}!"
 end

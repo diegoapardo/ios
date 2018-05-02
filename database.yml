@@ -1,5 +1,2 @@
-development: &non_production_settings
-  db_name: 'heroku_d621c641b841663'
-  db_host: 'us-cdbr-iron-east-05.cleardb.net'
-  db_username: 'baadd3ec66bd37'
-  db_password: '06105946'
+production:
+  url: <%= ENV['DATABASE_URL'] %>

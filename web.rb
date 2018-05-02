@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
+require 'sinatra/activerecord'
 require 'active_record'
 
 ActiveRecord::Base.establish_connection(
@@ -9,21 +10,22 @@ ActiveRecord::Base.establish_connection(
   :password => "06105946",
   :database => "heroku_d621c641b841663"
 )
-#
-# class User < ActiveRecord::Base
-# end
-#
-# # ActiveRecord::Migration.create_table :users do |t|
-# #   t.string :name
-# #   t.string :password
-# # end
-#
-# class App < Sinatra::Application
+
+
+class User < ActiveRecord::Base
+end
+
+# ActiveRecord::Migration.create_table :users do |t|
+#   t.string :name
+#   t.string :password
 # end
 
+class App < Sinatra::Application
+end
+
 get '/' do
-  # 'Hi ' + User.first.name + ', your password is ' + User.first.password
-  "hi"
+  'Hi ' + User.first.name + ', your password is ' + User.first.password
+  # "hi"
 end
 
 get '/test/:name' do
